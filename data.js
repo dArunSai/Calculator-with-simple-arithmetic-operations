@@ -1,23 +1,16 @@
-let buttons = document.querySelector(".buttons");
-let btn = document.querySelectorAll("span");
-let value = document.getElementById("value");
-let toggleBtn = document.querySelector(".toggleBtn");
-let body = document.querySelector("body");
 
-for (let i = 0; i < btn.length; i++) {
-  btn[i].addEventListener("click", function () {
-    if (this.innerHTML == "=") {
-      value.innerHTML = eval(value.innerHTML);
-    } else {
-      if (this.innerHTML == "Clear") {
-        value.innerHTML = "";
-      } else {
-        value.innerHTML += this.innerHTML;
+
+function addToDisplay(value) {
+document.getElementById("display").value+= value;
+console.log(a);
       }
-    }
-  });
-}
 
-toggleBtn.onclick = function () {
-  body.classList.toggle("dark");
-};
+      function clearDisplay() {
+        document.getElementById("display").value = "";
+      }
+
+      function calculate() {
+        var expression = document.getElementById("display").value;
+        var result = eval(expression);
+        document.getElementById("display").value = result;
+      }
