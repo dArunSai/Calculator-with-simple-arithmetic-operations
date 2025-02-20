@@ -1,5 +1,3 @@
-
-
 function addToDisplay(value) {
 document.getElementById("display").value+= value;
 console.log(a);
